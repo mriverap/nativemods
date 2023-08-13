@@ -1,5 +1,9 @@
 import {SafeAreaView, Text} from 'react-native';
 import React from 'react';
+import {NativeModules} from 'react-native';
+
+console.log(NativeModules.Counter);
+NativeModules.Counter.increment();
 
 const NativeModulesApp = () => {
   return (
