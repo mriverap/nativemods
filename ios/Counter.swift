@@ -12,9 +12,10 @@ class Counter: NSObject{
   private var count = 0;
   
   @objc
-  func increment(){
+  func increment(_ callback:RCTResponseSenderBlock){
     count += 1;
-    print(count);
+    //print(count);
+    callback([count])
   }
 
 @objc

@@ -3,7 +3,10 @@ import React from 'react';
 import {NativeModules} from 'react-native';
 
 console.log(NativeModules.Counter);
-NativeModules.Counter.increment();
+NativeModules.Counter.increment(value => {
+  console.log('Count is ', value);
+});
+console.log(NativeModules.Counter.getConstants());
 
 const NativeModulesApp = () => {
   return (
